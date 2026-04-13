@@ -1,5 +1,6 @@
 import React,{Component} from "react";
 import StudentView from "./StudentView";
+import { Link } from "react-router-dom";
 
 const url = 'http://localhost:8000/students';
 
@@ -21,13 +22,15 @@ class Home extends Component{
   }
   
   render(){
-    // const data=[this.state.studentList];
-    
     return(<>
+       <div className="row container">
+        <div className="col-sm-6">
+         <Link className="btn btn-primary" to="/student/add">New</Link>
+         </div>
+       </div>
       <div className="panel panel-primary">
         <div className="panel-heading">Student details</div>
         <div class="row">
-          {/* <h2>{this.state.studentList}</h2> */}
           <StudentView studentList={this.state.studentList}/>
         </div>
       </div>

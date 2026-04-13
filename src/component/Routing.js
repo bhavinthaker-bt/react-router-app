@@ -5,6 +5,7 @@ import Home from "./Home";
 import Exams from "./Exams";
 import ContactUs from "./ContactUs";
 import StudentDetails from "./StudentDetails";
+import AddStudent from './AddStudent';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Route path="/exams" element={<Exams />} />
         <Route path="/contactus" element={<ContactUs />} />
         <Route path="/student/:id" element={<StudentDetails />} />
+        <Route path="/student/add" element={<AddStudent/>} />
       </Routes>
     </BrowserRouter>
     

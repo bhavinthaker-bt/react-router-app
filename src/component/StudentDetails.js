@@ -25,7 +25,6 @@ class StudentDetails extends Component{
     }
   }
   componentDidMount(){
-    console.log(`prop value is:  ${this.props.match}`);
     fetch(`${url}${this.props.params.id}`,{method:"GET"})
     .then((response)=> response.json())
     .then((data)=>{this.setState({studentFullDetail:data})})
